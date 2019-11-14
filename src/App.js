@@ -64,7 +64,7 @@ class App extends React.Component {
         </header>
 
         <section className="content">
-          <div className="description">
+          <div className="description font">
             <p>
             The Game of Life is a 'cellular automaton' invented by Cambridge mathematician John Conway.
                 It consists of a collection of cells which, based on a few mathematical rules, can live, die or multiply. 

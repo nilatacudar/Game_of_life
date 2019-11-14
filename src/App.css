@@ -12,6 +12,9 @@
   margin: 14px;
   text-align: justify;
 }
+.font {
+  font-family: 'EB Garamond', serif;
+}
 
 .content {
   background-color: #f2f2f2;
