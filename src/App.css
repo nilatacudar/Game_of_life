@@ -49,13 +49,17 @@ button:hover {
 }
 
 .cell {
-  border: 2px solid black;
+  border: 1px solid black;
   width: 15px;
   height: 15px;
+   -webkit-transition: background-color 2s; /* Safari prior 6.1 */
+  transition: background-color 1s;
 }
 
 .liveCell{
   background-color: #282c34;
+   -webkit-transition: background-color 2s; /* Safari prior 6.1 */
+  transition: background-color 1s;
 }
 
 footer {

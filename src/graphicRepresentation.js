@@ -1,5 +1,5 @@
 import React from 'react';
-import algoGameOfLife from './algoGameOfLive'
+import algoGameOfLife from './algoGameOfLive';
 
 class GraphicRepresentation extends React.Component{
   constructor(props) {
@@ -22,6 +22,9 @@ class GraphicRepresentation extends React.Component{
     this.handleClickNext = this.handleClickNext.bind(this);
   }
 
+  
+
+
   static getDerivedStateFromProps(props, state){
     if (props.width === state.width && props.height === state.height ){
       return null;
@@ -39,6 +42,12 @@ class GraphicRepresentation extends React.Component{
   }
 
   handleClickCell(y, x){
+    let audio = document.createElement('audio');
+    audio.src = './sound.mp3';
+    audio.volume = 0.1;
+    audio.type = "audio/mp3"
+    audio.play();
+
     this.setState((state) => { 
       const { cells, liveCell, deadCell } = state;
       const tempCells = cells.slice(0);
@@ -63,7 +72,7 @@ class GraphicRepresentation extends React.Component{
     const rows = cells[0].length;
     return (
       <div className='inline'>
-        <div>
+        <div>      
           <div className="centre">
             <div style={{ display: 'grid', 'gridTemplateColumns': `repeat(${rows}, 1fr)` }}>
                 {cells.map((row, yIndex) =>
